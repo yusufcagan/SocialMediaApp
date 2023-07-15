@@ -25,7 +25,7 @@ const PostComponent: React.FC<any> = ({data}) => {
     (event: LayoutChangeEvent) => {
       const {height} = event.nativeEvent.layout;
       setViewHeight(height);
-      console.log('hL çalıştı');
+      console.log('hL çalisti');
     },
     [viewHeight],
   );
@@ -120,17 +120,19 @@ const PostComponent: React.FC<any> = ({data}) => {
               />
             </TouchableOpacity>
           </View>
-          <TouchableOpacity style={{flexDirection: 'row'}}>
+          <View style={{flexDirection: 'row'}}>
             <Text>
               {data.comment.length === 0 ? null : data.comment?.length}{' '}
               {data.comment.length === 0 ? null : 'Yanıt'}
             </Text>
-            <Text>
-              {'   '}
-              {data.likes.length === 0 ? null : data.likes?.length}{' '}
-              {data.likes.length === 0 ? null : 'Beğenme'}
-            </Text>
-          </TouchableOpacity>
+            <TouchableOpacity>
+              <Text>
+                {'   '}
+                {data.likes.length === 0 ? null : data.likes?.length}{' '}
+                {data.likes.length === 0 ? null : 'Beğenme'}
+              </Text>
+            </TouchableOpacity>
+          </View>
         </View>
       </View>
     </TouchableOpacity>

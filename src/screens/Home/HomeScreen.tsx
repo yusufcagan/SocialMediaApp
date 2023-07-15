@@ -41,6 +41,7 @@ const PostData = [
 ];
 
 const HomeScreen: React.FC = () => {
+  //const navigation = useNavigation();
   return (
     <SafeAreaView style={styles.container}>
       {PostData.map((item, index) => (

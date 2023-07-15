@@ -11,6 +11,7 @@ import SearchIcon from '../assets/images/searchIcon.png';
 import PostIcon from '../assets/images/postIcon.png';
 import FollowIcon from '../assets/images/heartIcon.png';
 import UserIcon from '../assets/images/userIcon.png';
+import Stack from './StackNav';
 
 const Tab = createBottomTabNavigator();
 
@@ -18,8 +19,8 @@ export default function MyTabs() {
   return (
     <Tab.Navigator screenOptions={{headerShown: false}}>
       <Tab.Screen
-        name="Home"
-        component={HomeScreen}
+        name="Stack"
+        component={Stack}
         options={{
           tabBarIcon: ({focused}) => {
             return (
